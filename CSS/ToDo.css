@@ -1,0 +1,75 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.main-container {
+  border: 2px solid black;
+  width: 30rem;
+  border-radius: 5px;
+  padding:25px;
+}
+
+.main-heading {
+  text-align: center;
+  color: blueviolet;
+}
+
+.Add-Items-input {
+  margin-top: 25px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.input-Additems{
+    padding: 5px;
+    width: 20rem;
+    border: 2px solid lightslategray;
+    border-radius: 5px;
+    
+}
+
+.Add-btn{
+    background-color: rgb(56, 176, 23);
+    color: white;
+    border: transparent;
+    width: 5rem;
+    border-radius: 5px;
+}
+
+.todo-list-container  {
+    margin-top: 25px;   
+    border-radius: 5px;
+}
+
+.todo-list-value{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.todo-item{
+background-color: rgb(228, 228, 228);
+display: flex;
+justify-content: space-between;
+padding: 20px;
+}
+
+.delete-btn{
+    background-color: red;
+    color: white;
+    width: 5rem;
+    padding: 4px;
+    border: transparent;
+    border-radius: 5px;
+}
+
+.edit-btn{
+    background-color: rgb(188, 220, 125);
+    color: white;
+    width: 3rem;
+    padding: 4px;
+    border: transparent;
+    border-radius: 5px;
+}
