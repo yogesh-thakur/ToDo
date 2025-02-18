@@ -1,6 +1,7 @@
 const inputFiled = document.querySelector(".input-Additems");
 const AddBtn = document.querySelector(".Add-btn");
 const todoListContainer = document.querySelector(".todo-list-container .todo-list-value");
+const todoData = [];
 
 AddBtn.addEventListener("click", function () {
   if (inputFiled.value.trim() !== "") {
@@ -16,7 +17,8 @@ AddBtn.addEventListener("click", function () {
 
 function createList(todoValue) {
   const createDiv = document.createElement("div");
-  
+  createDiv.setAttribute("class", "appendData"); 
+
   createDiv.innerHTML = `
     <span class="todo-value">${todoValue.value}</span>
     <span>
@@ -26,11 +28,18 @@ function createList(todoValue) {
   `;
 
   todoListContainer.appendChild(createDiv);
-
-
   const deleteBtn = createDiv.querySelector(".delete-btn");
   deleteBtn.addEventListener("click", function () {
     createDiv.remove()
   });
-}
-//  this project name is todo list
+
+  const editBtn = createDiv.querySelector(".edit-btn");
+  editBtn.addEventListener("click", function () {
+    inputFiled.value = todoValue.value; 
+    const index = todoData.findIndex(item => item.id === todoValue.id);
+    if (index !== -1) {
+      todoData.splice(index, 1);
+    }
+    createDiv.remove();
+  });
+  }; 
