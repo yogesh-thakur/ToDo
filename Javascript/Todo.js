@@ -1,7 +1,6 @@
 const inputFiled = document.querySelector(".input-Additems");
 const AddBtn = document.querySelector(".Add-btn");
 const todoListContainer = document.querySelector(".todo-list-container .todo-list-value");
-const todoData = [];
 
 AddBtn.addEventListener("click", function () {
   if (inputFiled.value.trim() !== "") {
@@ -34,3 +33,4 @@ function createList(todoValue) {
     createDiv.remove()
   });
 }
+//  this project name is todo list
